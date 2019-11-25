@@ -14,13 +14,12 @@ import automationpractice.com.pageObjects.CartPage;
 import automationpractice.com.pageObjects.ClothesPage;
 import automationpractice.com.pageObjects.ShoppingPage;
 import automationpractice.com.pageObjects.SignFormPage;
-import utils.EmailsGenerator;
+
 
 public class UserExperienceTest {
 
 	private WebDriver driver;
 	private Actions action;
-
 	private Clothes clothes;
 	private Cart cart;
 	private ShoppingActions shoppingActions;
@@ -29,12 +28,31 @@ public class UserExperienceTest {
 	private Account account;
 
 	@BeforeClass
-	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-
+	public void setup(string browserSelect) {
+		
+		try {
+		
+			if(browserSelect.equalsIgnoreCase("firefox")) {
+				
+			driver = new FirefoxDriver();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().window().maximize(); 
+			
+			  }else if (browserSelect.equalsIgnoreCase("chrome")) { 
+			 
+				  driver = new ChromeDriver();
+				  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				  driver.manage().window().maximize();
+				
+			  }
+		} catch (WebDriverException e) {
+			System.out.println(e.getMessage());
+			}
+		}
+		
+		
+		
 		action = new Actions(driver);
-
 		clothes = new Clothes(driver);
 		cart = new Cart(driver);
 		shoppingActions = new ShoppingActions(driver);
@@ -48,7 +66,7 @@ public class UserExperienceTest {
 	}
 
 	@AfterClass
-	public void closeAll() {
+	public void tearDown() {
 		account.getAccountLogout().click();
 		driver.quit();
 	}
