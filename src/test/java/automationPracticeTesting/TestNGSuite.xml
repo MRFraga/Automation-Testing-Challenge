@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="UX Test Suite" parallel="false" preserve-order="true" verbose="10">
+ <test name="ChromeTest">
+ 	<parameter name="browserSelect" value="chrome" />
+ 	<classes>
+ 		<class name="automationPracticeTesting.UserExperienceTest">
+ 		  <methods>
+                <include name="selectProduct" />
+                <include name="addProductToCart" />
+                <include name="performCheckout" />
+                <include name="cartContentsCheck" />
+                <include name="clientRegistration" />
+                <include name="addressContentCheck" />
+                <include name="termsOfServiceCheck" />
+                <include name="shoppingPriceCheck" />
+                <include name="payment" />
+                <include name="confirmOrder" />
+            </methods>
+ 	    </class>	
+ 	</classes>
+ </test>
+ <test name="FirefoxTest">
+ 	<parameter name="browserSelect" value="firefox" />
+ 	<classes>
+ 		<class name="automationPracticeTesting.UserExperienceTest">
+ 		  <methods>
+                <include name="selectProduct" />
+                <include name="addProductToCart" />
+                <include name="performCheckout" />
+                <include name="cartContentsCheck" />
+                <include name="clientRegistration" />
+                <include name="addressContentCheck" />
+                <include name="termsOfServiceCheck" />
+                <include name="shoppingPriceCheck" />
+                <include name="payment" />
+                <include name="confirmOrder" />
+            </methods>
+ 	    </class>	
+ 	</classes>
+ </test>
+</suite>
