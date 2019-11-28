@@ -111,6 +111,13 @@ public class UserExperienceTest {
 	@Test(priority = 2)
 	public void addProductToCart() {
 		
+		/*
+		Os executores de Javascript são devido a um erro intermitente que
+		ocorre no Firefox: ocasionalmente, o Selenium não captura um 
+		elemento que esteja na tela mas requerendo um scroll do usuário
+		para ser visível. O executor é para prevenir tal situação.
+		*/
+		
 		JavascriptExecutor PageDown = (JavascriptExecutor) driver;
 		PageDown.executeScript("window.scrollBy(0,500)", "");
 		
