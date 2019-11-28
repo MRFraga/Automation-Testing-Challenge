@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /* 
-   Collection of useful Selenium functions.
-   Comments below are kept as of the original author
+   Coleção de funções úteis para Selenium.
+   Os comentários abaixo foram mantidos do autor original
 */   
 
 
