@@ -13,7 +13,6 @@ private WebDriver driver;
 		this.driver = driver;
 	}
 	
-	
 	public WebElement getAccountCreationForm() {
 		return Utils.waitForElementPresence(driver, By.id("account-creation_form"), 10);
 	}
@@ -42,27 +41,15 @@ private WebDriver driver;
 		return Utils.waitForElementPresence(driver, By.id("passwd"), 10);
 	}
 	
-//	public WebElement getCustomerDateOfBirthDay() {
-//		return Utils.waitForElementPresence(driver, By.id("uniform-days"), 10);
-//	}
-	
 	public Select selectCustomerDateOfBirthDay() {
 		WebElement dayOfBirth = Utils.waitForElementPresence(driver, By.id("days"), 10);
 		return new Select(dayOfBirth);
 	}
 	
-//	public WebElement getCustomerDateOfBirthMonth() {
-//		return Utils.waitForElementPresence(driver, By.id("uniform-months"), 10);
-//	}
-	
 	public Select selectCustomerDateOfBirthMonth() {
 		WebElement monthOfBirth = Utils.waitForElementPresence(driver, By.id("months"), 10);
 		return new Select(monthOfBirth);
 	}
-	
-//	public WebElement getCustomerDateOfBirthYear() {
-//		return Utils.waitForElementPresence(driver, By.id("uniform-years"), 10);
-//	}
 	
 	public Select selectCustomerDateOfBirthYear() {
 		WebElement yearOfBirth = Utils.waitForElementPresence(driver, By.id("years"), 10);
@@ -93,19 +80,12 @@ private WebDriver driver;
 		return Utils.waitForElementPresence(driver, By.id("city"), 10);
 	}
 
-//	public WebElement getCountry() {
-//		return Utils.waitForElementPresence(driver, By.id("uniform-id_country"), 10);
-//	}
-	
 	public Select selectCountry() {
 		WebElement country = Utils.waitForElementPresence(driver, By.id("id_country"), 10);
 		return new Select(country);
 	}
 	
-//	public WebElement getState() {
-//		return Utils.waitForElementPresence(driver, By.id("uniform-id_state"), 10);
-//	}
-	
+
 	public Select selectState() {
 		WebElement state = Utils.waitForElementPresence(driver, By.id("id_state"), 10);
 		return new Select(state);
