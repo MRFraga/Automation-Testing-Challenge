@@ -12,6 +12,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/* 
+   Collection of useful Selenium functions.
+   Comments below are kept as of the original author
+*/   
+
+
 /**
  * Utils klasa sadrzi helper funkcije koje se koriste na vise mesta u page klasama. 
  * Na ovaj nacin su delovi koje se ponavljaju izvuceni na jedno mesto.
